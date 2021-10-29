@@ -15,13 +15,16 @@
 
 
             <div class="score">
-                <h1>Mcoin:</h1>
+
+                <h1 id="textscore">Mario-Coin:</h1>
                 <h1 id="numscore"></h1>
+                <h1>$</h1>
+                     
             </div>
     
     
             <div class="coin">
-                <button onclick = "coinbutton()" >
+                <button class="coinbutton" onclick = "coinbutton()" >
                     <img src="bilder/coin3.png" alt="" width="200px" height="200px" id="coin" >
                 </button>  
             </div>
@@ -33,11 +36,7 @@
 
 
 
-        <div class="midd">
 
-
-
-        </div>
 
 
 
@@ -47,17 +46,17 @@
                 <button onclick = "peach()" >
                     <img src="bilder/peach.png" alt="" width="100%" height="100px">
                 </button>
-                
+            </div>
 
+            <div class="shyguy">
+                <button onclick="shyguy()" >
+                    <img src="bilder/shyguy.png" alt="" width="100%" height="100px">
+                </button>
             </div>
 
         </div>
 
-        
-
-
-        
-
+  
 
     </div>
 
@@ -69,6 +68,7 @@
         var peach_js = 100;
         var peachamout = 0;
         var peachincrease = 0;
+
 
         var intervalId = window.setInterval(function(){
             // kode som du vil skal kjøres hvert sekund feks, "update"
@@ -83,7 +83,7 @@
             peachincrease = peachamout * peach_js;
             coins += peachincrease;
             
-        }, 10000);
+        }, 1000);
 
 
        function coinbutton() {
