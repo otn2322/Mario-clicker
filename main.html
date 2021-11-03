@@ -51,6 +51,7 @@
             <div class="peach">
                 <button onclick = "peach()" >
                     <img src="bilder/peach.png" alt="" width="100%" height="100px">
+                    10$
                 </button>
             </div>
 
@@ -61,7 +62,7 @@
             </div>
 
             <div class="oneup">
-                <button onclick="oneup">
+                <button onclick="oneup()">
                     <img src="bilder/1up.png" alt="" width="100%" height="100px">
                 </button>
             </div>
@@ -81,16 +82,17 @@
 
         var coins = 0;
 
-        var peach_js = 100;
+        var peach_js = 10;
         var peachamout = 0;
         var peachincrease = 0;
+        var peach_price = 10
 
-        var shyguy_js = 1000;
-        var shyguyamout = 0;
+        var shyguy_value_each = 1000;
+        var shyguy_amount = 0;
         var shyguyincrease = 0;
 
-        var oneup_js = 5;
-
+        var oneup_increase = 4;
+        var coinpower = 1;
 
 
 
@@ -98,49 +100,60 @@
         var intervalId = window.setInterval(function(){
             // kode som du vil skal kjøres hvert sekund feks, "update"
             document.getElementById("numscore").innerHTML = coins;
-            
-            
-        }, 100);
-        var intervalId = window.setInterval(function(){
-            // kode som du vil skal kjøres hvert sekund feks, "update"
-            document.getElementById("numscore").innerHTML = coins;
+        }, 1);
 
+
+        var intervalId2 = window.setInterval(function(){
+            // kode som du vil skal kjøres hvert sekund feks, "update"
             peachincrease = peachamout * peach_js;
             coins += peachincrease;
-            
         }, 1000);
-        var intervalId = window.setInterval(function(){
-            // kode som du vil skal kjøres hvert sekund feks, "update"
-            document.getElementById("numscore").innerHTML = coins;
 
-            shyguyincrease = shyguyamout * shyguy_js;
+
+        var intervalId3 = window.setInterval(function(){
+            // leger verdi ifra shyguy in til coins
+            shyguyincrease = shyguy_amount * shyguy_value_each;
             coins += shyguyincrease;
 
         }, 6000);
 
 
-
+        var intervalId4 = window.setInterval(function(){
+            // kode som du vil skal kjøres hvert sekund feks, "update"
+            coins += coinpower;
+        }, 6000);
+ 
+        var intervalId5 = window.setInterval(function(){     }, 6000);
+ 
 
 
        function coinbutton() {
            
-           coins++;
+           coins += coinpower;
            
        }
 
        function peach() {
+        if (coins >= peach_price){
+            peachamout += 1;
+            coins -= peach_price;
+            peach_price *= 10;
+        }
 
-        peachamout += 1;
+       
 
        }
 
        function shyguy() {
-
-        shyguyamout += 1;
+        
+        shyguy_amount += 1;
 
        }
 
-       setInterval(increase, 1000);
+       function oneup() {
+        coinpower += oneup_increase;
+        console.log(coinpower);
+       }
 
    </script>
 
