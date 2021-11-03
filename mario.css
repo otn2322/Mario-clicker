@@ -16,20 +16,16 @@ html, body {
   display: flex;
   flex-direction: column;
 width: 80%;
-height: 100%;
+height: 90%;
 background-color: blue;
 
 }
 
-.midd {
-  width: 50%;
-  height: 100%;
-  background-color: orange;
-}
+
 
 .høyre {
 width: 20%;
-height: 100%;
+height: 90%;
 background-color: purple;
 }
 
@@ -62,7 +58,7 @@ background-color: purple;
 }
 
 .peach {
-  width: 100%;
+ 
 }
 
 
