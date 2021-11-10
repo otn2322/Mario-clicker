@@ -5,91 +5,47 @@
     <link rel="stylesheet" href="mario.css">
 </head>
 <body>
-
-    
-
-
     <div class="score">
-
         <h1 id="textscore">Mario-Coin:</h1>
         <h1 id="numscore"></h1>
-        <h1>$</h1>
-             
+        <h1>$</h1>   
     </div>
-    
-    <div class = "main">
-
-
-
-        
-
+    <div class = "main"> 
         <div class="venstre">
-
-
-           
-    
-    
             <div class="coin">
                 <button class="coinbutton" onclick = "coinbutton()" >
                     <img src="bilder/coin3.png" alt="" width="200px" height="200px" id="coin" >
                 </button>  
             </div>
-
-  
-
-            
         </div>
-
-
-
-
-
-
-
         <div class="høyre">
-
-            <div class="peach">
-                <button onclick = "peach()" >
-                    <img src="bilder/peach.png" alt="" width="100%" height="100px">
-                    <h2 id="peach_price" > </h2>
-                </button>
+            <button onclick = "peach()">
+            <div id="peach" class="gg">
+                <img src="bilder/peach.png" alt="">
+                <h4 id="peach_price"></h4>
+                <h2 id="peachamount_bought"></h2>
             </div>
-
-            <div class="shyguy">
-                <button onclick="shyguy()" >
-                    <img src="bilder/shyguy.png" alt="" width="100%" height="100px">
-                    <h2 id="shyguy_price"></h2>
-                </button>
+            </button>
+            <button onclick="shyguy()">
+            <div class="gg">
+                <img src="bilder/shyguy.png" alt="">
+                <h4 id="shyguy_price"></h4>
             </div>
-
-            <div class="oneup">
-                <button onclick="oneup()">
-                    <img src="bilder/1up.png" alt="" width="100%" height="100px">
-                    <h2 id="oneup_price"></h2>
-                </button>
+            </button>
+            <button onclick="oneup()">
+            <div class="gg">
+                <img src="bilder/1up.png" alt="">
+                <h4 id="oneup_price"></h4>
             </div>
-
-            <div class="ghost">
-                <button onclick="ghost()">
-                    <img src="bilder/ghost.png" alt="" width="100%" height="100px">
-                    <h2 id="ghost_price"></h2>
-                </button>
+            </button>
+            <button onclick="ghost()">
+            <div class="gg">
+                <img src="bilder/ghost.png" alt="">
+                <h4 id="ghost_price"></h4>
             </div>
-
+            </button>
         </div>
-
-  
-
     </div>
-
-
-
-
-
-
-   <script src="mario.js"></script>
-
-
-
+<script src="mario.js"></script>
 </body>
 </html>

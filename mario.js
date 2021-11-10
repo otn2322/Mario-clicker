@@ -1,4 +1,4 @@
-var coins = 0;
+var coins = 100000;
 
 var peach_value_each = 5;
 var peachamout = 0;
