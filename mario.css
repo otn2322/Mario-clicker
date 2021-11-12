@@ -15,9 +15,9 @@ html, body {
   flex-direction: column;
   width: 90%;
   height: 90%;
-  background-color: blue;
   justify-content: center;
   align-items: center;
+  background-image: url("gif/skyback.gif");
 }
 
 .høyre {
@@ -38,16 +38,26 @@ overflow-x: hidden;
   justify-content: center;
   align-self: flex-start;
   width: 100%;
-}
-
-.gg {
-  width: 100%;
-  margin-bottom: 10%;
-  height: 120px;
+  background-image: url("");
   
 }
 
-.gg img {
-  width: 100%;
-  height: 70%;
+.coinbutton {
+  background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+
+#textscore {
+  color: yellow;
+}
+#numscore {
+  color: yellow;
+}
+#cashsymbol {
+  color: yellow;
 }
