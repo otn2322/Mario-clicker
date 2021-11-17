@@ -40,6 +40,10 @@ var donkeykong_amount = 0;
 var donkeykong_increase = 0;
 var donkeykong_price = 10000000;
 
+var netherbomb_price = 1000000;
+
+
+
 
 
 document.getElementById("peach_price").innerHTML = peach_price + "$";
@@ -50,6 +54,7 @@ document.getElementById("toad_price").innerHTML = toad_price + "$";
 document.getElementById("mario_price").innerHTML = mario_price + "$";
 document.getElementById("bowserjr_price").innerHTML = bowserjr_price + "$";
 document.getElementById("donkeykong_price").innerHTML = donkeykong_price + "$";
+document.getElementById("netherbomb_price").innerHTML = netherbomb_price + "$";
 
 document.getElementById("peach_amount").innerHTML = peachamount;
 document.getElementById("shyguy_amount").innerHTML = shyguy_amount;
@@ -207,5 +212,12 @@ function donkeykong() {
         document.getElementById("donkeykong_price").innerHTML = donkeykong_price + "$";
         document.getElementById("donkeykong_amount").innerHTML = donkeykong_amount;
 
+    }
+}
+
+function netherbomb() {
+    if (coins >= netherbomb_price) {
+        coins = 0;
+        
     }
 }
