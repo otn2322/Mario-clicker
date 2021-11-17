@@ -34,6 +34,11 @@ var bowserjr_amount = 0;
 var bowserjr_increase = 0;
 var bowserjr_price = 2500000;
 
+var donkeykong_value_each = 40000;
+var donkeykong_amount = 0;
+var donkeykong_increase = 0;
+var donkeykong_price = 10000000;
+
 
 
 document.getElementById("peach_price").innerHTML = peach_price + "$";
@@ -43,6 +48,7 @@ document.getElementById("ghost_price").innerHTML = ghost_price + "$";
 document.getElementById("toad_price").innerHTML = toad_price + "$";
 document.getElementById("mario_price").innerHTML = mario_price + "$";
 document.getElementById("bowserjr_price").innerHTML = bowserjr_price + "$";
+document.getElementById("donkeykong_price").innerHTML = donkeykong_price + "$";
 
 
 
@@ -57,27 +63,23 @@ var intervalId2 = window.setInterval(function(){
     // leger verdi ifra peach in til coins
     peachincrease = peachamount * peach_value_each;
     coins += peachincrease;
+
+    donkeykong_increase = donkeykong_amount * donkeykong_value_each;
+    coins += donkeykong_increase;
 }, 1000);
-
-
-var intervalId3 = window.setInterval(function(){
-    // leger verdi ifra shyguy in til coins
-    shyguyincrease = shyguy_amount * shyguy_value_each;
-    coins += shyguyincrease;
-
-}, 6000);
 
 
 var intervalId4 = window.setInterval(function(){
     // Gjør at coinpower blir ilag med coins
     coins += coinpower;
-}, 6000);
 
-var intervalId5 = window.setInterval(function(){  
-    // leger verdi ifra ghost in til coins
     ghost_increase = ghost_amount * ghost_value_each;
     coins += ghost_increase;
-   }, 6000);
+
+    shyguyincrease = shyguy_amount * shyguy_value_each;
+    coins += shyguyincrease;
+
+}, 6000);
 
 var intervalId6 = window.setInterval(function(){
     // leger verdi ifra toad in til coins
@@ -89,12 +91,10 @@ var intervalId7 = window.setInterval(function(){
     // leger verdi ifra mario in til coins
     mario_increase = mario_amount * mario_value_each;
     coins += mario_increase;
-}, 2000);
 
-var intervalId8 = window.setInterval(function(){
-    // leger verdi ifra bowserjr in til coins
     bowserjr_increase = bowserjr_amount * bowserjr_value_each;
     coins += bowserjr_increase;
+
 }, 2000);
 
 
@@ -179,5 +179,15 @@ function bowserjr(){
         coins -= bowserjr_price;
         bowserjr_price *= 2;
         document.getElementById("bowserjr_price").innerHTML = bowserjr_price + "$"
+    }
+}
+
+function donkeykong() {
+    if (coins >= donkeykong_price) {
+        donkeykong_amount += 1; 
+        coins -= donkeykong_price;
+        donkeykong_price *= 2;
+        document.getElementById("donkeykong_price").innerHTML = donkeykong_price + "$";
+
     }
 }
