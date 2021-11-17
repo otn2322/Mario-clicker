@@ -13,6 +13,7 @@ var shyguy_price = 1000;
 var oneup_increase = 5;
 var coinpower = 1;
 var oneup_price = 500;
+var oneup_amount = 0;
 
 var ghost_value_each = 1000;
 var ghost_amount = 0;
@@ -49,6 +50,18 @@ document.getElementById("toad_price").innerHTML = toad_price + "$";
 document.getElementById("mario_price").innerHTML = mario_price + "$";
 document.getElementById("bowserjr_price").innerHTML = bowserjr_price + "$";
 document.getElementById("donkeykong_price").innerHTML = donkeykong_price + "$";
+
+document.getElementById("peach_amount").innerHTML = peachamount;
+document.getElementById("shyguy_amount").innerHTML = shyguy_amount;
+document.getElementById("oneup_amount").innerHTML = oneup_amount;
+document.getElementById("ghost_amount").innerHTML = ghost_amount;
+document.getElementById("toad_amount").innerHTML = toad_amount;
+document.getElementById("mario_amount").innerHTML = mario_amount;
+document.getElementById("bowserjr_amount").innerHTML = bowserjr_amount;
+document.getElementById("donkeykong_amount").innerHTML = donkeykong_amount;
+
+
+
 
 
 
@@ -98,11 +111,6 @@ var intervalId7 = window.setInterval(function(){
 }, 2000);
 
 
-function amount_bought() {
-    document.getElementById("peachamout").innerHTML = peachamount;
-}
-
-
 function coinbutton() {
    
    coins += coinpower;
@@ -115,6 +123,7 @@ if (coins >= peach_price){
     coins -= peach_price;
     peach_price *= 3;
     document.getElementById("peach_price").innerHTML = peach_price + "$";
+    document.getElementById("peach_amount").innerHTML = peachamount;
     
 }
 
@@ -128,6 +137,7 @@ if (coins >= shyguy_price) {
     coins -= shyguy_price;
     shyguy_price *= 5;
     document.getElementById("shyguy_price").innerHTML = shyguy_price + "$";
+    document.getElementById("shyguy_amount").innerHTML = shyguy_amount;
 
 }
 
@@ -140,7 +150,7 @@ if (coins >= oneup_price) {
     coins -= oneup_price;
     oneup_price *= 10;
     document.getElementById("oneup_price").innerHTML = oneup_price + "$";
-
+    document.getElementById("oneup_amount").innerHTML = oneup_amount;
     
 }
 }
@@ -151,6 +161,7 @@ function ghost() {
         coins -= ghost_price;
         ghost_price *= 2;
         document.getElementById("ghost_price").innerHTML = ghost_price + "$";
+        document.getElementById("ghost_amount").innerHTML = ghost_amount;
 
     }
 }
@@ -161,6 +172,8 @@ function toad() {
         coins -= toad_price;
         toad_price *= 2;
         document.getElementById("toad_price").innerHTML = toad_price + "$"
+        document.getElementById("toad_amount").innerHTML = toad_amount;
+
     }
 }
 
@@ -170,6 +183,8 @@ function mario() {
         coins -= mario_price;
         mario_price *= 2;
         document.getElementById("mario_price").innerHTML = mario_price + "$"
+        document.getElementById("mario_amount").innerHTML = mario_amount;
+
     }
 }
 
@@ -179,6 +194,8 @@ function bowserjr(){
         coins -= bowserjr_price;
         bowserjr_price *= 2;
         document.getElementById("bowserjr_price").innerHTML = bowserjr_price + "$"
+        document.getElementById("bowserjr_amount").innerHTML = bowserjr_amount;
+
     }
 }
 
@@ -188,6 +205,7 @@ function donkeykong() {
         coins -= donkeykong_price;
         donkeykong_price *= 2;
         document.getElementById("donkeykong_price").innerHTML = donkeykong_price + "$";
+        document.getElementById("donkeykong_amount").innerHTML = donkeykong_amount;
 
     }
 }

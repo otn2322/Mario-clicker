@@ -31,7 +31,7 @@ overflow-x: hidden;
 }
 
 .score {
-  height: 10%;
+  height: 5%;
   background-color: red;
   display: flex;
   flex-direction: row;
@@ -40,6 +40,17 @@ overflow-x: hidden;
   width: 100%;
   background-image: url("");
   
+}
+
+.money {
+  height: 5%;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: flex-start;
+  width: 100%;
+  background-image: url("");
 }
 
 .coinbutton {
