@@ -30,12 +30,12 @@ var mario_amount = 0;
 var mario_increase = 0;
 var mario_price = 500000;
 
-var bowserjr_value_each = 4000;
+var bowserjr_value_each = 10000;
 var bowserjr_amount = 0;
 var bowserjr_increase = 0;
 var bowserjr_price = 2500000;
 
-var donkeykong_value_each = 40000;
+var donkeykong_value_each = 50000;
 var donkeykong_amount = 0;
 var donkeykong_increase = 0;
 var donkeykong_price = 10000000;
@@ -113,7 +113,7 @@ var intervalId7 = window.setInterval(function(){
     bowserjr_increase = bowserjr_amount * bowserjr_value_each;
     coins += bowserjr_increase;
 
-}, 2000);
+}, 1000);
 
 
 function coinbutton() {
