@@ -89,7 +89,7 @@ var intervalId2 = window.setInterval(function(){
 
 var intervalId4 = window.setInterval(function(){
     // Gjør at coinpower blir ilag med coins
-    coins += coinpower;
+    
 
     ghost_increase = ghost_amount * ghost_value_each;
     coins += ghost_increase;
@@ -220,4 +220,7 @@ function netherbomb() {
         coins = 0;
         
     }
+    
 }
+
+
