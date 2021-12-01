@@ -33,7 +33,7 @@ var mario_price = 500000;
 var bowserjr_value_each = 10000;
 var bowserjr_amount = 0;
 var bowserjr_increase = 0;
-var bowserjr_price = 2500000;
+var bowserjr_price = 5000000;
 
 var donkeykong_value_each = 50000;
 var donkeykong_amount = 0;
@@ -122,56 +122,48 @@ function coinbutton() {
    
 }
 
-function peach() {
+document.getElementById("peachee").addEventListener("click", function(){ 
 if (coins >= peach_price){
     peachamount += 1;
     coins -= peach_price;
     peach_price *= 3;
     document.getElementById("peach_price").innerHTML = peach_price + "$";
     document.getElementById("peach_amount").innerHTML = peachamount;
-    
-}
+    }
+})
 
 
-
-}
-
-function shyguy() {
+document.getElementById("shy").addEventListener("click", function(){ 
 if (coins >= shyguy_price) {
     shyguy_amount += 1;
     coins -= shyguy_price;
     shyguy_price *= 5;
     document.getElementById("shyguy_price").innerHTML = shyguy_price + "$";
     document.getElementById("shyguy_amount").innerHTML = shyguy_amount;
+    }
+})
 
-}
-
-
-}
-
-function oneup() {
+document.getElementById("1up").addEventListener("click", function(){ 
 if (coins >= oneup_price) {
     coinpower += oneup_increase;
     coins -= oneup_price;
     oneup_price *= 10;
     document.getElementById("oneup_price").innerHTML = oneup_price + "$";
     document.getElementById("oneup_amount").innerHTML = oneup_amount;
-    
-}
-}
+    }
+})
 
-function ghost() {
+document.getElementById("ghost").addEventListener("click", function(){ 
     if (coins >= ghost_price) {
         ghost_amount += 1; 
         coins -= ghost_price;
         ghost_price *= 2;
         document.getElementById("ghost_price").innerHTML = ghost_price + "$";
         document.getElementById("ghost_amount").innerHTML = ghost_amount;
-
     }
-}
+})
 
-function toad() {
+document.getElementById("toad").addEventListener("click", function(){ 
     if (coins >= toad_price) {
         toad_amount += 1;
         coins -= toad_price;
@@ -180,9 +172,9 @@ function toad() {
         document.getElementById("toad_amount").innerHTML = toad_amount;
 
     }
-}
+})
 
-function mario() {
+document.getElementById("mario").addEventListener("click", function(){ 
     if (coins >= mario_price) {
         mario_amount += 1;
         coins -= mario_price;
@@ -191,9 +183,9 @@ function mario() {
         document.getElementById("mario_amount").innerHTML = mario_amount;
 
     }
-}
+})
 
-function bowserjr(){
+document.getElementById("bow").addEventListener("click", function(){ 
     if (coins >= bowserjr_price) {
         bowserjr_amount += 1;
         coins -= bowserjr_price;
@@ -202,9 +194,10 @@ function bowserjr(){
         document.getElementById("bowserjr_amount").innerHTML = bowserjr_amount;
 
     }
-}
+})
 
-function donkeykong() {
+
+document.getElementById("donkeykong").addEventListener("click", function(){ 
     if (coins >= donkeykong_price) {
         donkeykong_amount += 1; 
         coins -= donkeykong_price;
@@ -213,14 +206,38 @@ function donkeykong() {
         document.getElementById("donkeykong_amount").innerHTML = donkeykong_amount;
 
     }
-}
+})
 
-function netherbomb() {
+document.getElementById("netherbomb").addEventListener("click", function(){ 
     if (coins >= netherbomb_price) {
         coins = 0;
         
     }
-    
+})
+
+
+function getRandomPosition(element) {
+	var x = document.getElementById ("venstre1").offsetHeight-element.clientHeight;
+	var y = document.getElementById ("venstre1").offsetWidth-element.clientWidth;
+
+
+	var randomX = Math.floor(Math.random()*x);
+	var randomY = Math.floor(Math.random()*y);
+	return [randomX,randomY];
+}
+window.onload = function() {
+	var img = document.getElementById("mariostar");
+	img.setAttribute("style", "position:absolute;");
+	//img.setAttribute("src", "some-image.jpg");
+	document.body.appendChild(img);
+	var xy = getRandomPosition(img);
+	img.style.top = xy[0] + 'px';
+	img.style.left = xy[1] + 'px';
 }
 
+
+var intervalId6 = window.setInterval(function(){
+    var img = document.getElementById("mariostar");
+   img.style.visibility = "visible";
+}, 3000);
 

@@ -23,7 +23,6 @@ html, body {
 .høyre {
 width: 10%;
 height: 90%;
-background-color: purple;
 display: flex;
 flex-direction: column;
 overflow: scroll;
@@ -60,6 +59,16 @@ overflow-x: hidden;
     cursor: pointer;
     overflow: hidden;
     outline: none;
+}
+
+.star {
+  background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    visibility: hidden;
 }
 
 
